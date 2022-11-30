@@ -1,0 +1,7 @@
+MAPBASE MP MOTD
+
+You are playing Mapbase - HL2:DM
+Visit the official Mapbase mod site @ www.moddb.com/mods/mapbase
+Check the Mapbase wiki at @ www.github.com/mapbase-source/source-sdk-2013/wiki
+Joint the discord server @ www.discord.gg/FFA2XEb
+Keep an eye for updates about Mapbase MP at @ www.github.com/FriskTheFallenHuman/mapbase-mp

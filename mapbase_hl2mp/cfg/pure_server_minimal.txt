@@ -1,0 +1,16 @@
+whitelist
+{
+	// Server rules used for sv_pure.
+	//
+	// Do not modify this file.
+	//
+	// See pure_server_whitelist_example.txt for more details on when this file is used and what the rules mean.
+
+	//
+	// Enforce consistency for a few critical files
+	//
+
+	scripts\instructor_lessons.txt  trusted_source
+	scripts\mod_lessons.txt      trusted_source
+}
+	

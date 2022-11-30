@@ -1,0 +1,9 @@
+dm_mapbase_arena
+dm_lockdown
+dm_overwatch
+dm_powerhouse
+dm_resistance
+dm_runoff
+dm_steamlab
+dm_underpass
+halls3
