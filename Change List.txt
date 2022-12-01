@@ -1,0 +1,56 @@
+Crowbar:
+- The swing sound has been edited
+
+Gravity Gun:
+- Viewmodels and Worldmodels were edited to make them look better.
+- Viewmodel renders the right side
+- Worldmodel uses Viewmodel textures
+
+Pistol:
+- The .qc file was edited
+- "reload.smd" was edited in the "v_pistol_anims"
+- The worldmodel and texture were edited
+- The pistol shell was edited
+- The reload sound has been slightly modified
+- The script "game_sounds_weapons.txt" is modified to add the new reload for NPCs sound
+
+357 Magnum:
+- "Python_357.smd" was edited for CM2013 (texture not included)
+- Renamed to "Python_357_reference.smd" 
+- "Python_speedloader_reference.smd" was added to have it similar to the speedloader seen in MMod.
+- "reload.smd" was edited in "v_357_anims"
+
+SMG1: 
+- The .qc file was edited while "holster.smd" was added in "v_smg1_anims" folder 
+- The .qc file was edited for the worldmodel
+- The worldmodel and texture were slightly edited
+
+AR2:
+- The AR2 reference is renamed to "IRifle_reference_twohand.smd" for two hands. (Like in GMOD)
+- The worldmodel, magazine and texture were edited
+
+Shotgun:
+- "reload.smd" was edited in the "v_shotgun_anims"
+- The shotgun shell was edited
+- The pump sound has been modified
+- I modified the npc fire sounds
+- The worldmodel and texture were edited
+
+Crossbow: 
+- "Crossbow_reference.smd" was edited with the handle now added
+- The fire and reload sounds are now uncompressed
+
+Grenade: 
+- "holster.smd" was added in the "v_grenade_anims" folder
+- Both the viewmodel and worldmodel have been edited
+
+RPG: 
+- "holster.smd" was added in the "v_rpg_anims" folder
+- The worldmodel and texture were edited thanks to Romka
+- The rocket sound is now uncompressed
+
+Bugbait:
+- The worldmodel has been ported from the "Viewmodel for worldmodel" request
+
+Other Misc:
+- The debris sounds were uncompressed

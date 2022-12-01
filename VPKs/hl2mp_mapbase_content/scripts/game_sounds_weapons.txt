@@ -698,7 +698,7 @@
 	"volume"		"0.7"
 	"soundlevel"	"SNDLVL_NORM"
 
-	"wave"		"weapons/smg1/smg1_reload.wav"
+	"wave"		"weapons/pistol/reload_npc.wav"
 }
 
 "Weapon_Pistol.Empty"

@@ -1,0 +1,7 @@
+"SDK_VertexLitGeneric"
+{
+	"$baseTexture" "models/weapons/w_smg1/w_smg1"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models/weapons/w_smg1/w_smg2specularmask"	
+	"$envmaptint" "[ .4 .4 .4 ]"
+}
