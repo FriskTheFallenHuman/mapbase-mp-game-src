@@ -1,7 +1,86 @@
+# cache
+mapbase_hl2mp/cache/*
+mapbase_hl2mp/maps/soundcache/*
+mapbase_hl2mp/maps/graphs/*
+mapbase_hl2mp/materials/temp/*
+mapbase_hl2mp/sound/temp/*
+mapbase_hl2mp/sound.cache
+sound.cache
+*.sound.cache
+modelsounds.cache
+
+# crash dumps
+*.dmp
+
+# config files
+mapbase_hl2mp/*/cfg/sourcemod/*
+mapbase_hl2mp/*/cfg/autoexec_user.cfg
+mapbase_hl2mp/*/cfg/banned_ip.cfg
+mapbase_hl2mp/*/cfg/banned_user.cfg
+mapbase_hl2mp/*/cfg/config.cfg
+mapbase_hl2mp/*/cfg/server_blacklist.txt
+mapbase_hl2mp/*/cfg/server.cfg
+user.scr
+settings.scr
+admins.txt
+ServerConfig.vdf
+
+# logs
+mapbase_hl2mp/*/logs/*
+console.log
+
+# demo records
+*.dem
+
+# user stuff
+mapbase_hl2mp/*/cfg/pet.txt
+mapbase_hl2mp/*/download/*
+mapbase_hl2mp/*/downloadlists/*
+mapbase_hl2mp/*/SAVE/*
+mapbase_hl2mp/*/screenshots/*
+demoheader.tmp
+stats.txt
+gamestate.txt
+voice_ban.dt
+textwindow_temp.html
+mapbase_hl2mp/*/vpk/*
+mapbase_hl2mp/*/demos/*
+mapbase_hl2mp/*/materials/vgui/logos/ui/*
+mapbase_hl2mp/*/materials/vgui/logos/ui/andre.vmt
+mapbase_hl2mp/*/materials/vgui/logos/ui/chick1.vmt
+mapbase_hl2mp/*/materials/vgui/logos/ui/spray_dog.vmt
+mapbase_hl2mp/*/materials/vgui/logos/ui/spray_elited.vmt
+mapbase_hl2mp/*/materials/vgui/logos/ui/spray_flashbanged.vmt
+mapbase_hl2mp/*/materials/vgui/logos/ui/spray_kamikazi.vmt
+*.db
+
+# content source
+materialsrc/*
+soundsrc/*
+mapsrc/*.log
+
+# source plugins
+mapbase_hl2mp/*/addons/*
+
+# Ignore user custom assets
+mapbase_hl2mp/*/custom/*
+
+# faceposer stuff
+mapbase_hl2mp/*/expressions/*
+
+# shader files
+*.tmp
+*.vcs
+
+# map compile products
+*.prt
+
+# migration blocks
+*.vpk
+*.ain
 *.exe
 *.dll
 *.pdb
-*.vpk
 *.fgd
 
 mapbase_engine_bin/
