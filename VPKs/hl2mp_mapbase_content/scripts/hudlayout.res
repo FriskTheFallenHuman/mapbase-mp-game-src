@@ -1,6 +1,6 @@
 "Resource/HudLayout.res"
 {
-	HudHealth [!$DECK]
+	HudHealth [$WIN32]
 	{
 		"fieldName"		"HudHealth"
 		"xpos"	"16"
@@ -17,22 +17,22 @@
 		"digit_xpos" "50"
 		"digit_ypos" "2"
 	}
-
-	HudHealth [$DECK]
+	HudHealth [$X360]
 	{
 		"fieldName"		"HudHealth"
-		"xpos"	"16"
-		"ypos"	"426"
-		"wide"	"130"
-		"tall"  "42"
+		"xpos"	"48"
+		"ypos"	"416"
+		"wide"	"115"
+		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
 		
 		"text_xpos" "8"
-		"text_ypos" "23"
-		"digit_xpos" "66"
-		"digit_ypos" "0"
+		"text_ypos" "18"
+		"digit_xpos" "60"
+		"digit_ypos" "-1"
 	}
 
 	TargetID
@@ -91,7 +91,7 @@
 		"text_xpos"	"26"
 	}
 
-	HudSuit [!$DECK]
+	HudSuit [$WIN32]
 	{
 		"fieldName"		"HudSuit"
 		"xpos"	"140"
@@ -100,30 +100,33 @@
 		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
+
 		"text_xpos" "8"
 		"text_ypos" "20"
 		"digit_xpos" "50"
 		"digit_ypos" "2"
 	}
-
-	HudSuit [$DECK]
+	HudSuit [$X360]
 	{
 		"fieldName"		"HudSuit"
-		"xpos"	"150"
-		"ypos"	"426"
-		"wide"	"120"
-		"tall"  "42"
+		"xpos"	"176"
+		"ypos"	"416"
+		"wide"	"117"
+		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
-		
+
 		"text_xpos" "8"
-		"text_ypos" "23"
-		"digit_xpos" "56"
-		"digit_ypos" "0"
+		"text_ypos" "18"
+		"digit_xpos" "50"
+		"digit_ypos" "-1"
 	}
-	HudAmmo	[!$DECK]
+
+	HudAmmo	[$WIN32]
 	{
 		"fieldName" "HudAmmo"
 		"xpos"	"r150"
@@ -132,7 +135,9 @@
 		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
+
 		"text_xpos" "8"
 		"text_ypos" "20"
 		"digit_xpos" "44"
@@ -140,26 +145,27 @@
 		"digit2_xpos" "98"
 		"digit2_ypos" "16"
 	}
-
-	HudAmmo	[$DECK]
+	HudAmmo	[$X360]
 	{
 		"fieldName" "HudAmmo"
-		"xpos"	"r150"
-		"ypos"	"426"
-		"wide"	"152"
-		"tall"  "42"
+		"xpos"	"r208"
+		"ypos"	"416"
+		"wide"	"160"
+		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
+
 		"text_xpos" "8"
-		"text_ypos" "24"
-		"digit_xpos" "55"
-		"digit_ypos" "0"
-		"digit2_xpos" "100"
-		"digit2_ypos" "12"
+		"text_ypos" "18"
+		"digit_xpos" "60"
+		"digit_ypos" "-1"
+		"digit2_xpos" "120"
+		"digit2_ypos" "14"
 	}
 
-	HudAmmoSecondary [!$DECK]
+	HudAmmoSecondary	[$WIN32]
 	{
 		"fieldName" "HudAmmoSecondary"
 		"xpos"	"r76"
@@ -168,83 +174,91 @@
 		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
+
 		"text_xpos" "8"
 		"text_ypos" "22"
 		"digit_xpos" "36"
 		"digit_ypos" "2"
 	}
-
-	HudAmmoSecondary [$DECK]
+	HudAmmoSecondary	[$X360]
 	{
 		"fieldName" "HudAmmoSecondary"
-		"xpos"	"r82"
-		"ypos"	"426"
-		"wide"	"70"
-		"tall"  "42"
+		"xpos"	"r113"
+		"ypos"	"416"
+		"wide"	"65"
+		"tall"  "36"
 		"visible" "1"
 		"enabled" "1"
+
 		"PaintBackgroundType"	"2"
+
 		"text_xpos" "8"
-		"text_ypos" "24"
-		"digit_xpos" "42"
-		"digit_ypos" "0"
+		"text_ypos" "22"
+		"digit_xpos" "36"
+		"digit_ypos" "-1"
 	}
 	
-	HudSuitPower	[!$DECK]
+	HudSuitPower	[$WIN32]
 	{
 		"fieldName" "HudSuitPower"
 		"visible" "1"
 		"enabled" "1"
 		"xpos"	"16"
-		"ypos"	"420"
+		"ypos"	"396"
 		"wide"	"102"
-		"tall"	"48"
+		"tall"	"26"
 		
 		"AuxPowerLowColor" "255 0 0 220"
 		"AuxPowerHighColor" "255 220 0 220"
 		"AuxPowerDisabledAlpha" "70"
+
 		"BarInsetX" "8"
 		"BarInsetY" "15"
 		"BarWidth" "92"
 		"BarHeight" "4"
-		"BarChunkWidth" "6" [!$DECK]
-		"BarChunkWidth" "7" [$DECK]
+		"BarChunkWidth" "6"
 		"BarChunkGap" "3"
+
 		"text_xpos" "8"
 		"text_ypos" "4"
 		"text2_xpos" "8"
 		"text2_ypos" "22"
 		"text2_gap" "10"
+
 		"PaintBackgroundType"	"2"
 	}
-
-	HudSuitPower	[$DECK]
+	HudSuitPower	[$X360]
 	{
 		"fieldName" "HudSuitPower"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"16"
-		"ypos"	"386"
-		"wide"	"112"
-		"tall"	"54"
+		"xpos"	"48"
+		"ypos"	"370"
+		"wide"	"102"
+		"tall"	"26"
 		
-		"AuxPowerLowColor" "255 0 0 220"
+		"AuxPowerLowColor" "255 100 0 220"
 		"AuxPowerHighColor" "255 220 0 220"
 		"AuxPowerDisabledAlpha" "70"
+
 		"BarInsetX" "8"
-		"BarInsetY" "18"
-		"BarWidth" "102"
+		"BarInsetY" "19"
+		"BarWidth" "92"
 		"BarHeight" "5"
 		"BarChunkWidth" "6"
 		"BarChunkGap" "3"
+
 		"text_xpos" "8"
 		"text_ypos" "4"
 		"text2_xpos" "8"
-		"text2_ypos" "26"
-		"text2_gap" "14"
+		"text2_ypos" "25"
+		"text2_gap" "12"
+
 		"PaintBackgroundType"	"2"
 	}
+
 	HudPosture	[$WIN32]
 	{
 		"fieldName" 		"HudPosture"
@@ -252,13 +266,12 @@
 		"PaintBackgroundType"	"2"
 		"xpos"	"16"
 		"ypos"	"316"
-		"tall"  "35"
+		"tall"  "36"
 		"wide"	"36"
 		"font"	"WeaponIconsSmall"
-		"icon_xpos"	"8"
-		"icon_ypos" 	"-2"
+		"icon_xpos"	"10"
+		"icon_ypos" 	"0"
 	}
-
 	HudPosture	[$X360]
 	{
 		"fieldName" 		"HudPosture"
@@ -279,34 +292,24 @@
 		"visible" "1"
 		"PaintBackgroundType"	"2"
 		"xpos"	"270"		[$WIN32]
-		"ypos"	"444"		[!$DECK]
-		"ypos"	"436"		[$DECK]
-		"xpos_hidef"	"306"		[$X360]		// aligned to left
+		"ypos"	"444"		[$WIN32]
+		"xpos_hidef"	"293"		[$X360]		// aligned to left
 		"xpos_lodef"	"c-18"		[$X360]		// centered in screen
 		"ypos"	"428"		[$X360]				
-		"tall"  "24" [!$DECK]
-		"tall"  "30" [$DECK]
-		"wide"	"36" [!$DECK]
-		"wide"	"46" [$DECK]
-		"font"	"WeaponIconsSmall" [!$DECK]
-		"font"	"FlashlightDeck" [$DECK]
+		"tall"  "24"
+		"wide"	"36"
+		"font"	"WeaponIconsSmall"
 		
 		"icon_xpos"	"4"
-		"icon_ypos" "-8" [!$DECK]
-		"icon_ypos" "-12"  [$DECK]
+		"icon_ypos" "-8"
 		
 		"BarInsetX" "4"
-		"BarInsetY" "18" [!$DECK]
-		"BarInsetY" "22" [$DECK]
-		"BarWidth" "28" [!$DECK]
-		"BarWidth" "36" [$DECK]
-		"BarHeight" "2" [!$DECK]
-		"BarChunkWidth" "2" [!$DECK]
-		"BarHeight" "3" [$DECK]
-		"BarChunkWidth" "3" [$DECK]
+		"BarInsetY" "18"
+		"BarWidth" "28"
+		"BarHeight" "2"
+		"BarChunkWidth" "2"
 		"BarChunkGap" "1"
 	}
-
 	HudDamageIndicator
 	{
 		"fieldName" "HudDamageIndicator"
@@ -334,7 +337,6 @@
 		"DashHeight" "6"	[$X360]
 		"BorderThickness" "88"
 	}
-
 	HudWeaponSelection
 	{
 		"fieldName" "HudWeaponSelection"
@@ -434,7 +436,7 @@
 		"fieldName" "HudMenu"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -449,6 +451,7 @@
 		"wide"		"500"
 		"tall"		"136"	[$WIN32]
 		"tall"		"176"	[$X360]
+
 		"BgAlpha"	"128"
 
 		"GrowTime"		"0.25"
@@ -473,23 +476,36 @@
 		"PaintBackgroundType"	"2"
 	}
 
-	HudHistoryResource
+	HudHistoryResource	[$WIN32]
 	{
 		"fieldName" "HudHistoryResource"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"r272" [$DECK]
-		"xpos"	"r252" [!$DECK]
+		"xpos"	"r252"
 		"ypos"	"40"
 		"wide"	 "248"
 		"tall"	 "320"
 
-		"history_gap"	"64" [$DECK]
-		"history_gap"	"56" [!$DECK]
+		"history_gap"	"56" [!$OSX]
+		"history_gap"	"64" [$OSX]
 		"icon_inset"	"38"
-
 		"text_inset"	"36"
 		"text_inset"	"26"
+		"NumberFont"	"HudNumbersSmall"
+	}
+	HudHistoryResource	[$X360]
+	{
+		"fieldName" "HudHistoryResource"
+		"visible" "1"
+		"enabled" "1"
+		"xpos"	"r300"
+		"ypos"	"40" 
+		"wide"	 "248"
+		"tall"	 "240"
+
+		"history_gap"	"50"
+		"icon_inset"	"38"
+		"text_inset"	"36"
 		"NumberFont"	"HudNumbersSmall"
 	}
 
@@ -576,7 +592,8 @@
 		"PaintBackgroundType"	"2"
 	}
 
-	HudSquadStatus	[!$DECK]
+
+	HudSquadStatus	[$WIN32]
 	{
 		"fieldName"	"HudSquadStatus"
 		"visible"	"1"
@@ -591,28 +608,30 @@
 		"IconInsetX"	"8"
 		"IconInsetY"	"0"
 		"IconGap"		"24"
+
 		"PaintBackgroundType"	"2"
 	}
-
-	HudSquadStatus	[$DECK]
+	HudSquadStatus	[$X360]
 	{
 		"fieldName"	"HudSquadStatus"
 		"visible"	"1"
 		"enabled" "1"
-		"xpos"	"r160"
-		"ypos"	"372"
-		"wide"	"144"
-		"tall"	"46"
+		"xpos"	"r182"
+		"ypos"	"348"
+		"wide"	"134"
+		"tall"	"62"
 		"text_xpos"	"8"
-		"text_ypos"	"28"
+		"text_ypos"	"44"
 		"SquadIconColor"	"255 220 0 160"
 		"IconInsetX"	"8"
-		"IconInsetY"	"-10"
-		"IconGap"		"39"
+		"IconInsetY"	"-4"
+		"IconGap"		"24"
+		"IconFont"		"SquadIcon"
+
 		"PaintBackgroundType"	"2"
 	}
 
-	HudPoisonDamageIndicator	[!$DECK]
+	HudPoisonDamageIndicator	[$WIN32]
 	{
 		"fieldName"	"HudPoisonDamageIndicator"
 		"visible"	"0"
@@ -627,19 +646,18 @@
 		"TextColor"	"255 170 0 220"
 		"PaintBackgroundType"	"2"
 	}
-
-	HudPoisonDamageIndicator	[$DECK]
+	HudPoisonDamageIndicator	[$X360]
 	{
 		"fieldName"	"HudPoisonDamageIndicator"
 		"visible"	"0"
 		"enabled" "1"
-		"xpos"	"16"
-		"ypos"	"262"
-		"wide"	"190"
-		"tall"	"42"
+		"xpos"	"48"
+		"ypos"	"264"
+		"wide"	"192"
+		"tall"	"46"
 		"text_xpos"	"8"
-		"text_ypos"	"8"
-		"text_ygap" "14"
+		"text_ypos"	"6"
+		"text_ygap" "16"
 		"TextColor"	"255 170 0 220"
 		"PaintBackgroundType"	"2"
 	}
