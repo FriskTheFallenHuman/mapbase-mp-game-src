@@ -12,7 +12,7 @@ WeaponData
 
 	"clip_size"				"3"
 	"primary_ammo"			"None"
-	"secondary_ammo"		"slam"
+	"secondary_ammo"		"Slam"
 	"default_clip2"			"3"
 
 	"weight"				"1"

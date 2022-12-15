@@ -1,0 +1,6 @@
+Sprite{
+$spriteorientation vp_parallel
+"$spriteorigin" "[ 0.50 0.50 ]"
+"$baseTexture" "vizzys-icons/info_target_instructor_hint"
+$no_fullbright 1
+}
