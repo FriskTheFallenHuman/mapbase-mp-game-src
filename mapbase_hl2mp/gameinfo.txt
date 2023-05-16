@@ -11,6 +11,12 @@
 	nohimodel 1
 	nocrosshair 1
 	
+	// Load our fgd in our bin/ folder
+	GameData	"bin/hl2mp.fgd"
+	
+	// Our Instances goes here
+	InstancePath	"maps/instances/"
+	
 	// All versions run on the EP2 version of the flashlight by default,
 	// but you could use this setting to make it run on the HL2 & EP1 version of the flashlight,
 	// which runs on the player's own aux power.
@@ -87,7 +93,6 @@
 			// They should be right next to this mod.
 			game+mod			|gameinfo_path|../mapbase_hl2
 			game+mod			|gameinfo_path|../mapbase_hl2/content/*
-			game+mod			|gameinfo_path|../mapbase_shared/shared_content_v7_0.vpk
 			gamebin				|gameinfo_path|../mapbase_shared/shared_misc/bin
 
 			// We search VPK files before ordinary folders, because most files will be found in
