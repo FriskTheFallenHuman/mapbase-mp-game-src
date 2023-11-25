@@ -1,8 +1,8 @@
-"SDK_LightmappedGeneric"
+"LightmappedGeneric"
 {
 	// Original shader: BaseTimesLightmap
 	"$basetexture" "Tools/toolsnodraw_metal"
 	"%compilenodraw" 1
 	"$surfaceprop" "metal"
-	"%keywords" "mapbase_dev"
+	"%keywords" "Tools"
 }

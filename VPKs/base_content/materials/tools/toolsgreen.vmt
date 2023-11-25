@@ -1,7 +1,7 @@
-SDK_UnlitGeneric
+UnlitGeneric
 {
 	"$basetexture" "Tools/toolsgreen"
 	"%compileNoLight" 1
 
-	"%keywords" "mapbase_dev"
+	"%keywords" "Tools"
 }

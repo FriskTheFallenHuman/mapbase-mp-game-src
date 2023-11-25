@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Tools/toolsblocklight"
+	"%compilenonsolid" 1
+	"%compilenodraw" 1
+	"%compiledetail" 1
+	"%keywords" "Tools"
+}

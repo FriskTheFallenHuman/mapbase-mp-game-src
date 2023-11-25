@@ -1,8 +1,9 @@
 "LightmappedGeneric"
 {
 	// Original shader: BaseTimesLightmap
-	"$basetexture" "Tools/toolsnodraw_wood"
+	"$basetexture" "Tools/toolsinvisible"
+	"$translucent" "1"
 	"%compilenodraw" 1
-	"$surfaceprop" "wood"
+	"%compilepassbullets" 1
 	"%keywords" "Tools"
 }

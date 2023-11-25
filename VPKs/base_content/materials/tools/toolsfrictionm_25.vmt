@@ -1,4 +1,4 @@
-SDK_LightmappedGeneric
+LightmappedGeneric
 {
 	// Original shader: BaseTimesLightmapAlphaBlend
 	"$translucent" 1
