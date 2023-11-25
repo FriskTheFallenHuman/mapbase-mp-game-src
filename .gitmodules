@@ -1,0 +1,6 @@
+[submodule "fgds"]
+	path = fgds
+	url = https://github.com/FriskTheFallenHuman/mapbase-mp-fgds.git
+[submodule "modelsrc"]
+	path = modelsrc
+	url = https://github.com/FriskTheFallenHuman/mapbase-mp-model-src.git
