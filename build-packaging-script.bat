@@ -175,6 +175,12 @@ echo hl2_materials_source copied.
 xcopy /E /I VPKs\hl2_materials_overrides VPKs\hl2_materials
 echo hl2_materials_overrides copied.
 
+xcopy /E /I VPKs\ep2_materials_source VPKs\ep2_materials
+echo ep2_materials_source copied.
+REM TODO
+REM xcopy /E /I VPKs\ep2_materials_overrides VPKs\ep2_materials
+REM echo ep2_materials_overrides copied.
+
 xcopy /E /I VPKs\episodic_materials_source VPKs\episodic_materials
 echo episodic_materials_source copied.
 xcopy /E /I VPKs\episodic_materials_overrides VPKs\episodic_materials
@@ -192,6 +198,7 @@ echo =====================
 mkdir VPKs\hl2_scenes
 mkdir VPKs\lostcoast_scenes
 mkdir VPKs\episodic_scenes
+mkdir VPKs\ep2_scenes
 
 xcopy /E /I %SOURCE_HL2_SCENES_DIR% VPKs\hl2_scenes
 echo HL2 scenes copied
@@ -199,7 +206,7 @@ xcopy /E /I %SOURCE_EP1_SCENES_DIR% VPKs\episodic_scenes
 echo EP1 scenes copied
 xcopy /E /I %SOURCE_LC_SCENES_DIR% VPKs\lostcoast_scenes
 echo LC scenes copied
-xcopy /E /I %SOURCE_EP2_SCENES_DIR% VPKs\episodic_scenes
+xcopy /E /I %SOURCE_EP2_SCENES_DIR% VPKs\ep2_scenes
 echo EP2 scenes copied
 
 echo =====================
@@ -271,6 +278,13 @@ REM [===========] episodic_materials [===============]
 echo Moving episodic_materials
 move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
 
+REM [===========] ep2_materials [===============]
+
+%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\ep2_materials"
+%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\ep2_materials"
+echo Moving ep2_materials
+move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
+
 REM [===========] Scenes [===============]
 
 if exist VPKs\hl2_scenes (
@@ -280,6 +294,13 @@ if exist VPKs\hl2_scenes (
 	move VPKs\*.vpk %BUILD_DIR%\mapbase_hl2\content
 )
 
+if exist VPKs\lostcoast_scenes (
+	%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\lostcoast_scenes"
+	%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\lostcoast_scenes"
+	echo Moving lostcoast_scenes
+	move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
+)
+
 if exist VPKs\episodic_scenes (
 	%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\episodic_scenes"
 	%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\episodic_scenes"
@@ -287,10 +308,10 @@ if exist VPKs\episodic_scenes (
 	move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
 )
 
-if exist VPKs\lostcoast_scenes (
-	%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\lostcoast_scenes"
-	%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\lostcoast_scenes"
-	echo Moving lostcoast_scenes
+if exist VPKs\ep2_scenes (
+	%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\ep2_scenes"
+	%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\ep2_scenes"
+	echo Moving ep2_scenes
 	move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
 )
 
@@ -322,6 +343,8 @@ echo =====================
 echo Cleaning up files
 echo =====================
 
+rd /s /q VPKs\ep2_materials
+echo Loose ep2_materials removed
 rd /s /q VPKs\episodic_materials
 echo Loose episodic_materials removed
 rd /s /q VPKs\hl2_materials
@@ -329,6 +352,8 @@ echo Loose hl2_materials removed
 rd /s /q VPKs\lostcoast_materials
 echo Loose lostcoast_materials removed
 
+rd /s /q VPKs\ep2_scenes
+echo Loose ep2_scenes removed
 rd /s /q VPKs\episodic_scenes
 echo Loose episodic_scenes removed
 rd /s /q VPKs\hl2_scenes
