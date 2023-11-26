@@ -80,9 +80,9 @@ set USE_LOCAL_CODE=true
 
 rem USE_LOCAL_CODE only: Where the DLLs and SDK tools are
 set SOURCE_BIN_DIR="..\mapbase-mp\mp\game\bin"
-set SOURCE_MOD_EPISODIC_DIR="..\mapbase-mp\mp\game\mod_episodic"
-set SOURCE_MOD_HL2_DIR="..\mapbase-mp\mp\game\mod_hl2"
-set SOURCE_MOD_HL2MP_DIR="..\mapbase-mp\mp\game\mod_hl2mp"
+set SOURCE_MOD_EPISODIC_DIR="..\mapbase-mp\mp\game\mapbase_episodic"
+set SOURCE_MOD_HL2_DIR="..\mapbase-mp\mp\game\mapbase_hl2"
+set SOURCE_MOD_HL2MP_DIR="..\mapbase-mp\mp\game\mapbase_hl2mp"
 
 rem Where the original games' VCD files are (they come with the code repo by default)
 set SOURCE_HL2_SCENES_DIR="scenesrc\hl2\scenes"
@@ -121,11 +121,11 @@ echo =====================
 echo Copying loose folders
 echo =====================
 
-xcopy /E /I mapbase_episodic %BUILD_DIR%
+xcopy /E /I mapbase_episodic %BUILD_DIR%\mapbase_episodic
 echo mapbase_episodic copied
-xcopy /E /I mapbase_hl2 %BUILD_DIR%
+xcopy /E /I mapbase_hl2 %BUILD_DIR%\mapbase_hl2
 echo "mapbase_hl2 copied"
-xcopy /E /I mapbase_hl2mp %BUILD_DIR%
+xcopy /E /I mapbase_hl2mp %BUILD_DIR%\mapbase_hl2mp
 echo "mapbase_hl2mp copied"
 
 if "%USE_LOCAL_CODE%"=="true" (
@@ -135,37 +135,44 @@ if "%USE_LOCAL_CODE%"=="true" (
     
     echo Validating bin folders...
 
+    if not exist %BUILD_DIR%\mapbase_engine_bin mkdir %BUILD_DIR%\mapbase_engine_bin
     if not exist %BUILD_DIR%\mapbase_episodic\bin mkdir %BUILD_DIR%\mapbase_episodic\bin
     if not exist %BUILD_DIR%\mapbase_hl2\bin mkdir %BUILD_DIR%\mapbase_hl2\bin
     if not exist %BUILD_DIR%\mapbase_hl2mp\bin mkdir %BUILD_DIR%\mapbase_hl2mp\bin
     
     echo Copying binaries from mapbase-mp...
-    
-    xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_episodic\bin
-    xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_episodic\bin
-    xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_episodic\bin
-    xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_episodic\bin
-    
-    xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2\bin
-    xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2\bin
-    xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2\bin
-    xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2\bin
 	
-    xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2mp\bin
-    xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2mp\bin
-    xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2mp\bin
-    xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2mp\bin
+	echo [ ========== mapbase_episodic ================== ]
+   
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_episodic\bin
+	
+	echo [ ========== mapbase_hl2 ================== ]
+    
+    if exist %SOURCE_MOD_HL2_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2\bin
+	
+	echo [ ========== mapbase_hl2mp ================== ]
+	
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2mp\bin
     
     echo =====================
     echo Copying compile tools from SDK bin
     echo =====================
     
-    if not exist %BUILD_DIR%\mapbase_engine_bin mkdir %BUILD_DIR%\mapbase_engine_bin
-    xcopy /Y %SOURCE_BIN_DIR%\vbsp.exe %BUILD_DIR%\mapbase_engine_bin
-    xcopy /Y %SOURCE_BIN_DIR%\vrad.exe %BUILD_DIR%\mapbase_engine_bin
-    xcopy /Y %SOURCE_BIN_DIR%\vrad_dll.dll %BUILD_DIR%\mapbase_engine_bin
-    xcopy /Y %SOURCE_BIN_DIR%\vvis.exe %BUILD_DIR%\mapbase_engine_bin
-    xcopy /Y %SOURCE_BIN_DIR%\vvis_dll.dll %BUILD_DIR%\mapbase_engine_bin
+
+    xcopy /Y %SOURCE_BIN_DIR%\Release\vbsp.exe %BUILD_DIR%\mapbase_engine_bin
+    xcopy /Y %SOURCE_BIN_DIR%\Release\vrad_launcher.exe %BUILD_DIR%\mapbase_engine_bin
+    xcopy /Y %SOURCE_BIN_DIR%\Release\vrad_dll.dll %BUILD_DIR%\mapbase_engine_bin
+    xcopy /Y %SOURCE_BIN_DIR%\Release\vvis_launcher.exe %BUILD_DIR%\mapbase_engine_bin
+    xcopy /Y %SOURCE_BIN_DIR%\Release\vvis_dll.dll %BUILD_DIR%\mapbase_engine_bin
 )
 
 echo =====================
@@ -356,14 +363,14 @@ if "%USE_LOCAL_CODE%"=="false" (
 
     if not exist %BUILD_DIR%\mapbase_hl2\content\hl2_scenes_dir.vpk (
         if not exist %BUILD_DIR%\mapbase_episodic\content\episodic_scenes_dir.vpk (
-            echo     - Add hl2_scenes and\or episodic_scenes or lostcoast_scenes VPKs to the respective games' content directories
+            echo     "- Add hl2_scenes and\or episodic_scenes or lostcoast_scenes VPKs to the respective games' content directories."
         )
     )
 ) else (
     if not exist %BUILD_DIR%\mapbase_episodic\bin\game_shader_dx9.dll (
         if not exist %BUILD_DIR%\mapbase_hl2\bin\game_shader_dx9.dll (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\game_shader_dx9.dll (
-				echo     - Add missing shader DLLs
+				echo     "- Add missing shader DLLs."
 			)
         )
     )
@@ -371,7 +378,7 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\vaudio_miles.dll (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\vaudio_miles.dll (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\vaudio_miles.dll (
-				echo     - Add missing Audio DLLs (This makes the engine use MiniMp3)
+				echo     "- Add missing Audio DLLs (This makes the engine use MiniMp3)"
 			)
 		)
     )
@@ -379,7 +386,7 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\server.so (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\server.so (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\server.so (
-				echo     - Add missing Linux SOs (if this build should support Linux)
+				echo     "- Add missing Linux SOs (if this build should support Linux)"
 			)
 		)
     )
@@ -387,14 +394,14 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\server.dylib (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\server.dylib (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\server.dylib (
-				echo     - Add missing OSxs (if this build should support macOS)
+				echo     "- Add missing OSxs (if this build should support macOS)"
 			)
 		)
     )
 )
 
 if not exist %BUILD_DIR%\base_content\fgd\base.fgd (
-    echo     - Add the FGDs to base_content\fgd
+    echo     "- Add the FGDs to base_content\fgd"
 )
 
 if %ERRORLEVEL% NEQ 0 goto error
@@ -405,6 +412,7 @@ echo ==========================================
 
 echo Done! Press enter to continue
 pause
+exit
 
 :error
 echo Error packing assets!

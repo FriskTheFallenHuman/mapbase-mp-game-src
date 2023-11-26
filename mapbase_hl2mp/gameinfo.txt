@@ -11,8 +11,8 @@
 	nohimodel 1
 	nocrosshair 1
 	
-	// Load our fgd in our bin/ folder
-	GameData	"bin/hl2mp.fgd"
+	// Load our fgd in our fgds/ folder
+	GameData	"fgds/hl2mp.fgd"
 	
 	// Our Instances goes here
 	InstancePath	"maps/instances/"
@@ -55,17 +55,17 @@
 		// Mapbase has a fairly unique file system that needs some explanation.
 		// In its rawest form, it is spread out across 2-3 folders:
 		// 
-		// mapbase_shared - Shared Mapbase content, like editor icons, that are not unique to Half-Life 2.
+		// base_content - Base Mapbase content, like editor icons, that are not unique to Half-Life 2.
 		// mapbase_hl2 - Original HL2 branch of Mapbase.
 		// mapbase_episodic - Episodic branch of Mapbase.
 		// mapbase_hl2mp - Multiplayer branch of Mapbase.
 		// 
 		// Except mapbase_hl2mp, each folder relies on the previous, meaning mapbase_episodic cannot function
-		// without mapbase_hl2 and mapbase_hl2 cannot function without mapbase_shared.
+		// without mapbase_hl2 and mapbase_hl2 cannot function without base_content.
 		// mapbase_hl2mp is split like mapbase_episodic is: It relies on mapbase_hl2, but not mapbase_episodic.
 		// 
-		// mapbase_episodic > mapbase_hl2 > mapbase_shared
-		// mapbase_hl2mp > mapbase_hl2 > mapbase_shared
+		// mapbase_episodic > mapbase_hl2 > base_content
+		// mapbase_hl2mp > mapbase_hl2 > base_content
 		// 
 		// Each Mapbase folder has its own "content" subfolder contianing VPKs.
 		// These are mounted similar to the "custom" folder in which everything is mounted without listing out their names.
@@ -93,7 +93,7 @@
 			// They should be right next to this mod.
 			game+mod			|gameinfo_path|../mapbase_hl2
 			game+mod			|gameinfo_path|../mapbase_hl2/content/*
-			gamebin				|gameinfo_path|../mapbase_shared/shared_misc/bin
+			game+mod			|gameinfo_path|../base_content/base_content_v7_2.vpk
 
 			// We search VPK files before ordinary folders, because most files will be found in
 			// VPK and we can avoid making thousands of file system calls to attempt to open files

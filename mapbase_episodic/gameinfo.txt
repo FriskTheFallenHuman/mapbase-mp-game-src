@@ -7,29 +7,52 @@
 	type		singleplayer_only
 	supportsvr	0
 
-	GameData	"bin/halflife2.fgd"
-
-	icon		"resource/icon1"
+	// Load our fgd in our fgds/ folder
+	GameData	"fgds/halflife2.fgd"
+	
+	// Our Instances goes here
+	InstancePath	"maps/instances/"
+	
+	// All versions run on the EP2 version of the flashlight by default,
+	// but you could use this setting to make it run on the HL2 & EP1 version of the flashlight,
+	// which runs on the player's own aux power.
+	use_legacy_flashlight 0
 	
 	// Indicates this is an original Mapbase mod and not just a mod using its features.
 	mapbase_core 1
+	
+	icon		"resource/icon1"
+	
+	// Mapbase uses Momentum Mod Content mounting, this is how it looks like here
+	//mount
+	//{
+	//	*appid*
+	//	{
+	//		"head"    "0" // put this at head
+	//		"mod_folder"
+	//		{
+	//			"vpk"    "vpk_name" // mounts file: GameDir\mod_folder\vpk_name.vpk
+	//			"dir"    "dir_inside" // mounts folder: GameDir\mod_folder\dir_inside
+	//		}
+	//	}
+	//}
 
 	FileSystem
 	{
-		SteamAppId				243730		// This sets the app ID in Steam
+		SteamAppId				243750		// This sets the app ID in Steam
 		
 		//
 		// Mapbase has a fairly unique file system that needs some explanation.
 		// In its rawest form, it is spread out across 2-3 folders:
 		// 
-		// mapbase_shared - Shared Mapbase content, like editor icons, that are not unique to Half-Life 2.
+		// base_content - Base Mapbase content, like editor icons, that are not unique to Half-Life 2.
 		// mapbase_hl2 - Original HL2 branch of Mapbase.
 		// mapbase_episodic - Episodic branch of Mapbase.
 		// 
 		// Each folder relies on the previous, meaning mapbase_episodic cannot function without mapbase_hl2 and
-		// mapbase_hl2 cannot function without mapbase_shared.
+		// mapbase_hl2 cannot function without base_content.
 		// 
-		// mapbase_episodic > mapbase_hl2 > mapbase_shared
+		// mapbase_episodic > mapbase_hl2 > base_content
 		// 
 		// Each Mapbase folder has its own "content" subfolder contianing VPKs.
 		// These are mounted similar to the "custom" folder in which everything is mounted without listing out their names.
@@ -51,7 +74,7 @@
 			// Now search loose files.  We'll set the directory containing the gameinfo.txt file
 			// as the first "mod" search path (after any user customizations).  This is also the one
 			// that's used when writing to the "mod" path.
-			game+mod+mod_write+default_write_path		|gameinfo_path|.
+			game+game_write+mod+mod_write+default_write_path		|gameinfo_path|.
 			gamebin				|gameinfo_path|bin
 			
 			game+mod			|gameinfo_path|content/*
@@ -61,9 +84,7 @@
 			// Also, for Episodic Mapbase, get HL2 as well.
 			game+mod			|gameinfo_path|../mapbase_hl2
 			game+mod			|gameinfo_path|../mapbase_hl2/content/*
-			game+mod			|gameinfo_path|../mapbase_shared/shared_misc
-			gamebin				|gameinfo_path|../mapbase_shared/shared_misc/bin
-			game+mod			|gameinfo_path|../mapbase_shared/shared_content_v7_0.vpk
+			game+mod			|gameinfo_path|../base_content/base_content_v7_2.vpk
 
 			// We search VPK files before ordinary folders, because most files will be found in
 			// VPK and we can avoid making thousands of file system calls to attempt to open files
@@ -83,13 +104,6 @@
 	  		game				|all_source_engine_paths|sourcetest/sourcetest_pak.vpk // sourcetest has Lost Coast content
 	  		game				|all_source_engine_paths|lostcoast/lostcoast_pak.vpk // For those using Hammer with Half-Life 2's bin
 			platform				|all_source_engine_paths|platform/platform_misc.vpk
-
-			// Add the HL2 directory as a game search path.  This is also where where writes
-			// to the "game" path go.
-			game+game_write		ep2
-
-			// Where the game's binaries are
-			gamebin				episodic/bin
 
 			// Last, mount in shared HL2 loose files
 			game				|all_source_engine_paths|episodic
