@@ -93,3 +93,9 @@ mapbase_engine_bin/
 
 # Ignore our BUILDS/ directory
 BUILDS/*
+
+# Ignore any file that's include in the VPKs/*_materials_source
+VPKs/*_materials_source/*
+
+# Allow The mapbase multi tool to be here
+!MapbaseMultiTool.exe
