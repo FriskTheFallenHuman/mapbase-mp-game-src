@@ -17,11 +17,7 @@ REM #			"VPKs\hl2_materials_source", "VPKs\episodic_materials_source", and "VPKs
 REM #			folders in this repository. For episodic_materials_source, make sure the EP2 materials are converted
 REM #			after the EP1 materials so that the former group overwrites the latter.
 REM #
-REM #		3.	Find a previously released Mapbase build and extract the scenes from "mapbase_hl2\content\hl2_scenes"
-REM #			and "mapbase_episodic\content\episodic_scenes" to new "VPKs\hl2_scenes" and "VPKs\episodic_scenes"
-REM #			folders in this repository. (This does not apply if you are planning on using a local code repo)
-REM #
-REM #		4.	Tweak the directory variables below.
+REM #		3.	Tweak the directory variables below.
 REM #
 REM # With all of that done, you should be ready to create basic Mapbase builds using this script, although there are
 REM # a few manual steps involved which are not automated by default:
@@ -29,10 +25,6 @@ REM #
 REM #		-	For the code binaries, you will need to download artifacts from GitHub and insert them into the
 REM #			games' bin folders. (If you have a local copy, you can set USE_LOCAL_CODE below to true, but this
 REM #			usually does not contain everything needed for a build)
-REM #
-REM #		-	For the FGDs, you will need to download the latest version of the FGD repo. If you already have a
-REM #			local copy of this repo, set USE_LOCAL_FGDS below to 'true' and set the path. That will eliminate
-REM #			this manual step.
 REM #
 REM #		-	You will need to include the legacy pre-v7.0 shared_content VPK in mapbase_shared. This can be
 REM #			obtained from previously released builds.
@@ -69,8 +61,7 @@ title Creating Mapbase Build
 REM # =====================================================================================================
 
 rem Where vpk.exe and its dependencies are on your computer
-rem set BIN_DIR="%steampath%\steamapps\common\Source SDK Base 2013 Multiplayer\bin"
-set BIN_DIR="%steampath%\steamapps\common\Half-Life 2\bin"
+set BIN_DIR="%steampath%\steamapps\common\Source SDK Base 2013 Multiplayer\bin"
 
 rem This repository's 'VPKs' folder (used by vpk.exe)
 set VPK_CONTENT_DIR="VPKs"
