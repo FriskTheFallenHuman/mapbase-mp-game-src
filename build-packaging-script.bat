@@ -236,11 +236,11 @@ REM [===========] hl2_mapbase_content [===============]
 echo Moving hl2_mapbase_content
 move VPKs\*.vpk %BUILD_DIR%\mapbase_hl2\content
 
-REM [===========] hl2_mapbase_unused_weapons [===============]
+REM [===========] hl2_mapbase_unused_content [===============]
 
-%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\hl2_mapbase_unused_weapons"
-%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\hl2_mapbase_unused_weapons"
-echo Moving hl2_mapbase_unused_weapons
+%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\hl2_mapbase_unused_content"
+%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\hl2_mapbase_unused_content"
+echo Moving hl2_mapbase_unused_content
 move VPKs\*.vpk %BUILD_DIR%\mapbase_hl2\content
 
 REM [===========] hl2_materials [===============]
