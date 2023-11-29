@@ -224,9 +224,9 @@ echo Generating keypair for %VERSION%
 
 REM [===========] base_content [===============]
 
-%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\base_content_%VERSION_VPK_NAME%"
-%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\base_content_%VERSION_VPK_NAME%"
-echo Moving base_content_%VERSION_VPK_NAME%
+%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\base_content"
+%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\base_content"
+echo Moving base_content
 move VPKs\*.vpk %BUILD_DIR%\base_content
 
 REM [===========] hl2_mapbase_content [===============]
