@@ -84,7 +84,7 @@
 			// Also, for Episodic Mapbase, get HL2 as well.
 			game+mod			|gameinfo_path|../mapbase_hl2
 			game+mod			|gameinfo_path|../mapbase_hl2/content/*
-			game+mod			|gameinfo_path|../base_content/base_content_v7_2.vpk
+			game+mod			|gameinfo_path|../base_content/base_content.vpk
 
 			// We search VPK files before ordinary folders, because most files will be found in
 			// VPK and we can avoid making thousands of file system calls to attempt to open files
