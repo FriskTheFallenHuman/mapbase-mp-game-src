@@ -17,6 +17,7 @@
 		"digit_xpos" "50"
 		"digit_ypos" "2"
 	}
+	
 	overview
 	{
 		"fieldname"				"overview"
@@ -27,7 +28,7 @@
 		"wide"					"0"
 		"tall"					"0"
 	}
-	
+
 	TargetID
 	{
 		"fieldName" "TargetID"
@@ -35,6 +36,40 @@
 		"enabled" "1"
 		"wide"	 "f0"
 		"tall"	 "480"
+	}
+
+	HudVoiceSelfStatus
+	{
+		"fieldName" "HudVoiceSelfStatus"
+		"visible" "1"
+		"enabled" "1"
+		"xpos" "r43"
+		"ypos" "355"
+		"wide" "24"
+		"tall" "24"
+	}
+
+	HudVoiceStatus
+	{
+		"fieldName" "HudVoiceStatus"
+		"visible" "1"
+		"enabled" "1"
+		"xpos" "r200"
+		"ypos" "0"
+		"wide" "100"
+		"tall" "400"
+
+		"item_tall"	"24"
+		"item_wide"	"100"
+
+		"item_spacing" "2"
+
+		"icon_ypos"	"0"
+		"icon_xpos"	"0"
+		"icon_tall"	"24"
+		"icon_wide"	"24"
+
+		"text_xpos"	"26"
 	}
 
 	HudArmor
@@ -121,6 +156,20 @@
 
 		"PaintBackgroundType"	"2"
 	}
+
+	HudPosture
+	{
+		"fieldName" 		"HudPosture"
+		"visible" 		"1"
+		"PaintBackgroundType"	"2"
+		"xpos"	"16"
+		"ypos"	"316"
+		"tall"  "36"
+		"wide"	"36"
+		"font"	"WeaponIconsSmall"
+		"icon_xpos"	"10"
+		"icon_ypos" 	"0"
+	}
 	
 	HudFlashlight
 	{
@@ -147,42 +196,6 @@
 		"BarChunkGap" "1"
 	}
 
-	HudVoiceSelfStatus
-	{
-		"fieldName" "HudVoiceSelfStatus"
-		"visible" "1"
-		"enabled" "1"
-		"xpos" "r43"
-		"ypos" "355"
-		"wide" "24"
-		"tall" "24"
-	}
-
-	HudVoiceStatus
-	{
-		"fieldName" "HudVoiceStatus"
-		"visible" "1"
-		"enabled" "1"
-		"xpos" "r200"
-		"ypos" "0"
-		"wide" "100"
-		"tall" "400"
-
-		"item_tall"	"24"
-		"item_wide"	"100"
-
-		"item_spacing" "2"
-
-		"icon_ypos"	"0"
-		"icon_xpos"	"0"
-		"icon_tall"	"24"
-		"icon_wide"	"24"
-
-		"text_xpos"	"26"
-
-		"PaintBackgroundType" "0"
-	}
-	
 	HudDamageIndicator
 	{
 		"fieldName" "HudDamageIndicator"
@@ -198,18 +211,6 @@
 		"dmg_tall2" "200"
 	}
 
-	HudZoom
-	{
-		"fieldName" "HudZoom"
-		"visible" "1"
-		"enabled" "1"
-		"Circle1Radius" "66"
-		"Circle2Radius"	"74"
-		"DashGap"	"16"
-		"DashHeight" "4"	[$WIN32]
-		"DashHeight" "6"	[$X360]		
-		"BorderThickness" "88"
-	}
 	HudWeaponSelection
 	{
 		"fieldName" "HudWeaponSelection"
@@ -238,10 +239,10 @@
 		"fieldName" "HudCrosshair"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
-	
+
 	HudDeathNotice
 	{
 		"fieldName" "HudDeathNotice"
@@ -274,7 +275,7 @@
 		"fieldName" "HudVehicle"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -283,7 +284,7 @@
 		"fieldName" "ScorePanel"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -292,7 +293,7 @@
 		"fieldName" "HudTrain"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -301,7 +302,7 @@
 		"fieldName" "HudMOTD"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -313,23 +314,13 @@
 		"wide"	 "f0"
 		"tall"	 "480"
 	}
-	
-	HudGameMessage
-	{
-		"fieldName" "HudGameMessage"
-		"visible" "0"
-		"enabled" "0"
-		"xpos"	 "10"
-		"ypos"	 "152"
-		"wide"	 "f0"
-		"tall"	 "256"
-	}
+
 	HudMenu
 	{
 		"fieldName" "HudMenu"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -355,15 +346,18 @@
 		"topoffset"		"0"	[$X360]
 	}
 
-	HudChat
+	"HudChat"
 	{
-		"fieldName" "HudChat"
-		"visible" "1"
-		"enabled" "1"
-		"xpos"	"10"
-		"ypos"	"300"
-		"wide"	 "400"
-		"tall"	 "100"
+		"ControlName"		"EditablePanel"
+		"fieldName" 		"HudChat"
+		"visible" 		"1"
+		"enabled" 		"1"
+		"xpos"			"10"	[$WIN32]
+		"xpos"			"42"	[$X360]
+		"ypos"			"275"
+		"wide"	 		"320"
+		"tall"	 		"120"
+		"PaintBackgroundType"	"2"
 	}
 
 	HudHistoryResource
@@ -376,7 +370,8 @@
 		"wide"	 "248"
 		"tall"	 "320"
 
-		"history_gap"	"56"
+		"history_gap"	"56" [!$OSX]
+		"history_gap"	"64" [$OSX]
 		"icon_inset"	"38"
 		"text_inset"	"36"
 		"text_inset"	"26"
@@ -388,16 +383,7 @@
 		"fieldName" "HudGeiger"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
-		"tall"	 "480"
-	}
-
-	HUDQuickInfo
-	{
-		"fieldName" "HUDQuickInfo"
-		"visible" "1"
-		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -406,7 +392,7 @@
 		"fieldName" "HudWeapon"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 	HudAnimationInfo
@@ -414,7 +400,7 @@
 		"fieldName" "HudAnimationInfo"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
@@ -423,15 +409,15 @@
 		"fieldName" "HudPredictionDump"
 		"visible" "1"
 		"enabled" "1"
-		"wide"	 "f0"
+		"wide"	 "640"
 		"tall"	 "480"
 	}
 
 	HudHintDisplay
 	{
-		"fieldName"				"HudHintDisplay"
-		"visible"				"0"
-		"enabled"				"1"
+		"fieldName"	"HudHintDisplay"
+		"visible"	"0"
+		"enabled" "1"
 		"xpos"					"c-240"
 		"ypos"					"c60"
 		"xpos"	"r148"	[$X360]
@@ -444,7 +430,7 @@
 		"center_x"				"0"	// center text horizontally
 		"center_y"				"-1"	// align text on the bottom
 		"paintbackground"		"0"
-	}	
+	}
 
 	HudHintKeyDisplay
 	{
@@ -455,8 +441,8 @@
 		"ypos"		"r340"	[$WIN32]
 		"xpos"		"r148"	[$X360]
 		"ypos"		"r338"	[$X360]
-		"wide"		"100"
-		"tall"		"200"
+		"wide"	"100"
+		"tall"	"200"
 		"text_xpos"	"8"
 		"text_ypos"	"8"
 		"text_xgap"	"8"
@@ -466,40 +452,6 @@
 		"PaintBackgroundType"	"2"
 	}
 
-	HudSquadStatus
-	{
-		"fieldName"	"HudSquadStatus"
-		"visible"	"1"
-		"enabled" "1"
-		"xpos"	"r120"
-		"ypos"	"380"
-		"wide"	"104"
-		"tall"	"46"
-		"text_xpos"	"8"
-		"text_ypos"	"34"
-		"SquadIconColor"	"255 220 0 160"
-		"IconInsetX"	"8"
-		"IconInsetY"	"0"
-		"IconGap"		"24"
-
-		"PaintBackgroundType"	"2"
-	}
-
-	HudPoisonDamageIndicator
-	{
-		"fieldName"	"HudPoisonDamageIndicator"
-		"visible"	"0"
-		"enabled" "1"
-		"xpos"	"16"
-		"ypos"	"346"
-		"wide"	"136"
-		"tall"	"38"
-		"text_xpos"	"8"
-		"text_ypos"	"8"
-		"text_ygap" "14"
-		"TextColor"	"255 170 0 220"
-		"PaintBackgroundType"	"2"
-	}
 	HudCredits
 	{
 		"fieldName"	"HudCredits"
@@ -507,7 +459,7 @@
 		"visible"	"1"
 		"xpos"	"0"
 		"ypos"	"0"
-		"wide"	"f0"
+		"wide"	"640"
 		"tall"	"480"
 		"TextColor"	"255 255 255 192"
 
@@ -523,6 +475,7 @@
 		"wide"	 "960"	[$X360]
 		"tall"	 "720"	[$X360]
 	}
+
 	HudCommentary
 	{
 		"fieldName" "HudCommentary"
@@ -556,7 +509,7 @@
 		"fieldName" "HudHDRDemo"
 		"xpos"	"0"
 		"ypos"	"0"
-		"wide"	"f0"
+		"wide"	"640"
 		"tall"  "480"
 		"visible" "1"
 		"enabled" "1"
@@ -587,4 +540,17 @@
 		"wide"					"f60"	[$X360]
 		"tall"					"100"
 	}
+
+	CHudVote
+	{
+		"fieldName"		"CHudVote"
+		"xpos"			"0"			
+		"ypos"			"0"
+		"wide"			"640"
+		"tall"			"480"
+		"visible"		"1"
+		"enabled"		"1"
+		"bgcolor_override"	"0 0 0 0"
+		"PaintBackgroundType"	"0" // rounded corners
+	}	
 }

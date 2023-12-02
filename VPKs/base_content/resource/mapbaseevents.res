@@ -46,9 +46,27 @@
 	//	"field8"			"string"
 	//}
 	
+	// No idea why this is requiered since it is already added
+	"server_shutdown" 			// server shut down	
+	{
+		"reason"	"string"	// reason why server was shut down
+	}
+	
 	"skill_changed"
 	{
 		"skill_level"		"byte"
+	}
+	
+	"gameinstructor_draw"
+	{
+	}
+	
+	"gameinstructor_nodraw"
+	{
+	}
+	
+	"map_transition"
+	{
 	}
 	
 	"set_instructor_group_enabled"

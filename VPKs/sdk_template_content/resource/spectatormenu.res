@@ -34,7 +34,7 @@
 	"menuitem2"
 	{
 		"label"		"#Valve_Settings"
-						
+
 		"menuitem21"
 		{
 			"label"		"#Valve_Chat_Messages"
@@ -43,29 +43,23 @@
 		
 		"menuitem22"
 		{
-			"label"		"#Valve_Show_Status"
-			"toggle"	"spec_drawstatus"
-		}
-		
-		"menuitem23"
-		{
 			"label"		"#Valve_Overview_Locked"
 			"toggle"	"overview_locked"
 		}
 		
-		"menuitem24"
+		"menuitem23"
 		{
 			"label"		"#Valve_Overview_Names"
 			"toggle"	"overview_names"
 		}
 		
-		"menuitem25"
+		"menuitem24"
 		{
 			"label"		"#Valve_Overview_Health"
 			"toggle"	"overview_health"
 		}
 		
-		"menuitem26"
+		"menuitem25"
 		{
 			"label"		"#Valve_Overview_Tracks"
 			"toggle"	"overview_tracks"
@@ -75,7 +69,7 @@
 	"menuitem3"
 	{
 		"label"		"#Valve_Overview"
-						
+
 		"menuitem31"
 		{
 			"label"		"#Valve_Overview_Off"
