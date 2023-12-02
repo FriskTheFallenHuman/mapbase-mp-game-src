@@ -74,6 +74,7 @@ set SOURCE_BIN_DIR="..\mapbase-mp\mp\game\bin"
 set SOURCE_MOD_EPISODIC_DIR="..\mapbase-mp\mp\game\mapbase_episodic"
 set SOURCE_MOD_HL2_DIR="..\mapbase-mp\mp\game\mapbase_hl2"
 set SOURCE_MOD_HL2MP_DIR="..\mapbase-mp\mp\game\mapbase_hl2mp"
+set SOURCE_MOD_SCRATCH_DIR="..\mapbase-mp\mp\game\mapbase_scratch"
 
 rem Where the original games' VCD files are (they come with the code repo by default)
 set SOURCE_HL2_SCENES_DIR="scenesrc\hl2\scenes"
@@ -118,6 +119,8 @@ xcopy /E /I mapbase_hl2 %BUILD_DIR%\mapbase_hl2
 echo "mapbase_hl2 copied"
 xcopy /E /I mapbase_hl2mp %BUILD_DIR%\mapbase_hl2mp
 echo "mapbase_hl2mp copied"
+xcopy /E /I mapbase_scratch %BUILD_DIR%\mapbase_scratch
+echo "mapbase_scratch copied"
 
 if "%USE_LOCAL_CODE%"=="true" (
     echo =====================
@@ -130,6 +133,7 @@ if "%USE_LOCAL_CODE%"=="true" (
     if not exist %BUILD_DIR%\mapbase_episodic\bin mkdir %BUILD_DIR%\mapbase_episodic\bin
     if not exist %BUILD_DIR%\mapbase_hl2\bin mkdir %BUILD_DIR%\mapbase_hl2\bin
     if not exist %BUILD_DIR%\mapbase_hl2mp\bin mkdir %BUILD_DIR%\mapbase_hl2mp\bin
+    if not exist %BUILD_DIR%\mapbase_scratch\bin mkdir %BUILD_DIR%\mapbase_scratch\bin
     
     echo Copying binaries from mapbase-mp...
 	
@@ -153,7 +157,14 @@ if "%USE_LOCAL_CODE%"=="true" (
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2mp\bin
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2mp\bin
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2mp\bin
-    
+
+	echo [ ========== mapbase_scratch ================== ]
+	
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_scratch\bin
+
     echo =====================
     echo Copying compile tools from SDK bin
     echo =====================
@@ -217,6 +228,7 @@ mkdir %BUILD_DIR%\base_content
 mkdir %BUILD_DIR%\mapbase_episodic\content
 mkdir %BUILD_DIR%\mapbase_hl2\content
 mkdir %BUILD_DIR%\mapbase_hl2mp\content
+mkdir %BUILD_DIR%\mapbase_scratch\content
 
 echo Generating keypair for %VERSION%
 
@@ -285,6 +297,13 @@ REM [===========] ep2_materials [===============]
 echo Moving ep2_materials
 move VPKs\*.vpk %BUILD_DIR%\mapbase_episodic\content
 
+REM [===========] sdk_template_content [===============]
+
+%BIN_DIR%\vpk.exe -M -P -c 50 -k mapbase_mp_%VERSION%.publickey.vdf -K mapbase_mp_%VERSION%.privatekey.vdf -vpk "%VPK_CONTENT_DIR%\sdk_template_content"
+%BIN_DIR%\vpk.exe rehash "%VPK_CONTENT_DIR%\sdk_template_content"
+echo Moving sdk_template_content
+move VPKs\*.vpk %BUILD_DIR%\mapbase_scratch\content
+
 REM [===========] Scenes [===============]
 
 if exist VPKs\hl2_scenes (
@@ -327,6 +346,8 @@ copy %SOURCE_FGDS_DIR%\halflife2.fgd %BUILD_DIR%\base_content\fgd
 echo halflife2.fgd copied
 copy %SOURCE_FGDS_DIR%\hl2mp.fgd %BUILD_DIR%\base_content\fgd
 echo hl2mp.fgd copied
+copy %SOURCE_FGDS_DIR%\sdk.fgd %BUILD_DIR%\base_content\fgd
+echo sdk.fgd copied
 copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\base_content\fgd
 echo obsolete.fgd copied
 
@@ -364,6 +385,7 @@ echo Loose lostcoast_scenes removed
 mkdir %BUILD_DIR%\mapbase_episodic\custom
 mkdir %BUILD_DIR%\mapbase_hl2\custom
 mkdir %BUILD_DIR%\mapbase_hl2mp\custom
+mkdir %BUILD_DIR%\mapbase_scratch\custom
 
 mkdir %BUILD_DIR%\mapbase_episodic\maps
 mkdir %BUILD_DIR%\mapbase_hl2\maps
@@ -374,7 +396,7 @@ echo ==========================================
 
 if "%USE_LOCAL_CODE%"=="false" (
     echo     - ADD THE CODE
-    echo         - Add binaries to mapbase_hl2\mapbase_episodic and mapbase_hl2mp
+    echo         - Add binaries to mapbase_hl2\mapbase_episodic\mapbase_hl2mp and mapbase_scratch
     echo         - If applicable, add compile tools
 
     if not exist %BUILD_DIR%\mapbase_hl2\content\hl2_scenes_dir.vpk (
@@ -386,7 +408,9 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_episodic\bin\game_shader_dx9.dll (
         if not exist %BUILD_DIR%\mapbase_hl2\bin\game_shader_dx9.dll (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\game_shader_dx9.dll (
-				echo     "- Add missing shader DLLs."
+				if not exist %BUILD_DIR%\mapbase_scratch\bin\game_shader_dx9.dll (
+					echo     "- Add missing shader DLLs."
+				)
 			)
         )
     )
@@ -394,7 +418,9 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\vaudio_miles.dll (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\vaudio_miles.dll (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\vaudio_miles.dll (
-				echo     "- Add missing Audio DLLs (This makes the engine use MiniMp3)"
+				if not exist %BUILD_DIR%\mapbase_scratch\bin\vaudio_miles.dll (
+					echo     "- Add missing Audio DLLs (This makes the engine use MiniMp3)"
+				)
 			)
 		)
     )
@@ -402,7 +428,9 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\server.so (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\server.so (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\server.so (
-				echo     "- Add missing Linux SOs (if this build should support Linux)"
+				if not exist %BUILD_DIR%\mapbase_scratch\bin\server.so (
+					echo     "- Add missing Linux SOs (if this build should support Linux)"
+				)
 			)
 		)
     )
@@ -410,7 +438,9 @@ if "%USE_LOCAL_CODE%"=="false" (
     if not exist %BUILD_DIR%\mapbase_hl2\bin\server.dylib (
 		if not exist %BUILD_DIR%\mapbase_episodic\bin\server.dylib (
 			if not exist %BUILD_DIR%\mapbase_hl2mp\bin\server.dylib (
-				echo     "- Add missing OSxs (if this build should support macOS)"
+				if not exist %BUILD_DIR%\mapbase_scratch\bin\server.dylib (
+					echo     "- Add missing OSxs (if this build should support macOS)"
+				)
 			)
 		)
     )
