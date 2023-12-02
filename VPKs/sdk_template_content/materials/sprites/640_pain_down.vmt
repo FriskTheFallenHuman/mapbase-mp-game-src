@@ -1,0 +1,8 @@
+SDK_UnlitGeneric
+{
+	"$basetexture" "sprites/640_pain_down"
+	"$additive" "1"
+	"$vertexcolor" "1"
+	"$vertexalpha" "1"
+	"$ignorez"     "1"
+}

@@ -24,6 +24,7 @@ Scheme
 	BaseSettings
 	{
 		"FgColor"			"255 220 0 100"
+		"FgColor_vrmode"	"255 220 0 200"
 		"BgColor"			"0 0 0 76"
 
 		"Panel.FgColor"			"255 220 0 100"
@@ -590,7 +591,7 @@ Scheme
 				"name"		"Verdana" [$OSX]
 				"tall"		"16" [!$OSX]
 				"tall"		"14" [$OSX]
-				"tall_hidef"	"24"
+ 				"tall_hidef"	"24"
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
@@ -788,7 +789,7 @@ Scheme
 		// Mapbase adds these fonts to Source 2013 client schemes for the game instructor adapted from the VDC/Alien Swarm SDK.
 		// If your mod has its own client scheme, you must use the following fonts in order for the game instructor to work correctly.
 		// ========================================================================================================================
-		"InstructorTitle"
+        "InstructorTitle"
 		{
 			"1"
 			{

@@ -13,7 +13,7 @@
 // Use it when we figure out how to get Hammer to mount it but not the game.
 // 
 ///////////////////////////////////////////////////////////
-#base "SourceSchemeBase.res"
+#base "sourceschemebase.res"
 
 Scheme
 {

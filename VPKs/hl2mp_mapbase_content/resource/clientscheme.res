@@ -170,7 +170,7 @@ Scheme
 		RichText.SelectedTextColor		"Orange"
 		RichText.SelectedBgColor		"Blank"
 
-				ScrollBarButton.FgColor				"Orange"
+		ScrollBarButton.FgColor				"Orange"
 		ScrollBarButton.BgColor				"Blank"
 		ScrollBarButton.ArmedFgColor		"Orange"
 		ScrollBarButton.ArmedBgColor		"Blank"
@@ -256,7 +256,7 @@ Scheme
 		"Main.Title1.Color"	"255 255 255 255"
 
 		// Top-left corner of the "SOURCE" on the main screen
-		"Main.Title2.X"		"380"	
+		"Main.Title2.X"		"380"
 		"Main.Title2.Y"		"205"
 		"Main.Title2.Color"	"255 255 255 80"
 
@@ -272,7 +272,7 @@ Scheme
 		// Blank space to leave beneath the menu on the main screen
 		"Main.BottomBorder"	"32"
 	}
-	
+
 	//////////////////////// BITMAP FONT FILES /////////////////////////////
 	//
 	// Bitmap Fonts are ****VERY*** expensive static memory resources so they are purposely sparse
@@ -281,7 +281,7 @@ Scheme
 		// UI buttons, custom font, (256x64)
 		"Buttons"		"materials/vgui/fonts/buttons_32.vbf"
 	}
-	
+
 	
 	//////////////////////// FONTS /////////////////////////////
 	//
@@ -1059,7 +1059,7 @@ Scheme
 				"antialias" "1"
 				"custom" "1" [$OSX]
 		   }
-		}	
+		}
 		// Used by scoreboard and spectator UI for names which don't map in the normal fashion
 		"DefaultVerySmallFallBack"
 		{
@@ -1092,9 +1092,65 @@ Scheme
 			}
 		}
 
+		// ========================================================================================================================
+		// Mapbase adds these fonts to Source 2013 client schemes for the game instructor adapted from the VDC/Alien Swarm SDK.
+		// If your mod has its own client scheme, you must use the following fonts in order for the game instructor to work correctly.
+		// ========================================================================================================================
+        "InstructorTitle"
+		{
+			"1"
+			{
+				"name"			"Arial"
+				"tall"			"20"
+				"weight"		"400"
+				"antialias"		"1"
+				"dropshadow"	"1"
+			}
+		}
+
+		"InstructorKeyBindings"
+		{
+			"1"
+			{
+				"name"			"Arial"
+				"name"			"Trade Gothic Bold"
+				"tall"			"18"
+				"weight"		"600"
+				"antialias"		"1"
+				"dropshadow"	"0"
+			}
+		}
+
+		"InstructorButtons"
+		{
+			"1"
+			{
+				"name"			"Arial"
+				"name"			"Trade Gothic Bold"
+				"tall"			"15"
+				"weight"		"600"
+				"antialias"		"1"
+				"dropshadow"	"1"
+			}
+		}
+
+		"InstructorTitleGlow"
+		{
+			"1"
+			{
+				"name"			"Arial"
+				"name"			"Trade Gothic Bold"
+				"tall"			"20"
+				"weight"		"400"
+				"antialias"		"1"
+				"dropshadow"	"1"
+			}
+		}
+		// ========================================================================================================================
+		// ========================================================================================================================
 	}
 
-		//////////////////// BORDERS //////////////////////////////
+	//////////////////// BORDERS //////////////////////////////
 	//
 	// describes all the border types
 	Borders
