@@ -143,7 +143,23 @@ if "%USE_LOCAL_CODE%"=="true" (
     if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_episodic\bin
     if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_episodic\bin
     if exist %SOURCE_MOD_EPISODIC_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_episodic\bin
-	
+
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\brotlicommon.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\brotlicommon.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\brotlidec.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\brotlidec.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\brotlienc.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\brotlienc.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\crashpad_handler.exe xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\crashpad_handler.exe %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\crashpad_wer.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\crashpad_wer.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\curl.exe xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\curl.exe %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\curl-ca-bundle.crt xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\curl-ca-bundle.crt %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\fmt.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\fmt.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\legacy.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\legacy.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\libcrypto-3.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\libcrypto-3.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\libssh2.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\libssh2.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\libssl-3.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\libssl-3.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\nghttp2.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\nghttp2.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\sentry.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\sentry.dll %BUILD_DIR%\mapbase_episodic\bin
+    if exist %SOURCE_MOD_EPISODIC_DIR%\bin\zlib1.dll xcopy /Y %SOURCE_MOD_EPISODIC_DIR%\bin\zlib1.dll %BUILD_DIR%\mapbase_episodic\bin
+
 	echo [ ========== mapbase_hl2 ================== ]
     
     if exist %SOURCE_MOD_HL2_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2\bin
@@ -151,12 +167,44 @@ if "%USE_LOCAL_CODE%"=="true" (
     if exist %SOURCE_MOD_HL2_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2\bin
     if exist %SOURCE_MOD_HL2_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2\bin
 	
+    if exist %SOURCE_MOD_HL2_DIR%\bin\brotlicommon.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\brotlicommon.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\brotlidec.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\brotlidec.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\brotlienc.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\brotlienc.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\crashpad_handler.exe xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\crashpad_handler.exe %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\crashpad_wer.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\crashpad_wer.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\curl.exe xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\curl.exe %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\curl-ca-bundle.crt xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\curl-ca-bundle.crt %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\fmt.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\fmt.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\legacy.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\legacy.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\libcrypto-3.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\libcrypto-3.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\libssh2.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\libssh2.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\libssl-3.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\libssl-3.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\nghttp2.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\nghttp2.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\sentry.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\sentry.dll %BUILD_DIR%\mapbase_hl2\bin
+    if exist %SOURCE_MOD_HL2_DIR%\bin\zlib1.dll xcopy /Y %SOURCE_MOD_HL2_DIR%\bin\zlib1.dll %BUILD_DIR%\mapbase_hl2\bin
+	
 	echo [ ========== mapbase_hl2mp ================== ]
 	
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\client.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\client.dll %BUILD_DIR%\mapbase_hl2mp\bin
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_hl2mp\bin
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_hl2mp\bin
     if exist %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_hl2mp\bin
+	
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\brotlicommon.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\brotlicommon.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\brotlidec.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\brotlidec.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\brotlienc.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\brotlienc.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\crashpad_handler.exe xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\crashpad_handler.exe %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\crashpad_wer.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\crashpad_wer.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\curl.exe xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\curl.exe %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\curl-ca-bundle.crt xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\curl-ca-bundle.crt %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\fmt.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\fmt.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\legacy.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\legacy.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\libcrypto-3.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\libcrypto-3.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\libssh2.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\libssh2.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\libssl-3.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\libssl-3.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\nghttp2.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\nghttp2.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\sentry.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\sentry.dll %BUILD_DIR%\mapbase_hl2mp\bin
+    if exist %SOURCE_MOD_HL2MP_DIR%\bin\zlib1.dll xcopy /Y %SOURCE_MOD_HL2MP_DIR%\bin\zlib1.dll %BUILD_DIR%\mapbase_hl2mp\bin
 
 	echo [ ========== mapbase_scratch ================== ]
 	
@@ -164,6 +212,22 @@ if "%USE_LOCAL_CODE%"=="true" (
     if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\server.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\server.dll %BUILD_DIR%\mapbase_scratch\bin
     if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\game_shader_dx9.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\game_shader_dx9.dll %BUILD_DIR%\mapbase_scratch\bin
     if exist %SOURCE_MOD_SCRATCH_DIR%\bin\Release\vaudio_miles.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\Release\vaudio_miles.dll %BUILD_DIR%\mapbase_scratch\bin
+	
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\brotlicommon.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\brotlicommon.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\brotlidec.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\brotlidec.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\brotlienc.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\brotlienc.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\crashpad_handler.exe xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\crashpad_handler.exe %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\crashpad_wer.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\crashpad_wer.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\curl.exe xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\curl.exe %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\curl-ca-bundle.crt xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\curl-ca-bundle.crt %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\fmt.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\fmt.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\legacy.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\legacy.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\libcrypto-3.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\libcrypto-3.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\libssh2.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\libssh2.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\libssl-3.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\libssl-3.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\nghttp2.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\nghttp2.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\sentry.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\sentry.dll %BUILD_DIR%\mapbase_scratch\bin
+    if exist %SOURCE_MOD_SCRATCH_DIR%\bin\zlib1.dll xcopy /Y %SOURCE_MOD_SCRATCH_DIR%\bin\zlib1.dll %BUILD_DIR%\mapbase_scratch\bin
 
     echo =====================
     echo Copying compile tools from SDK bin
@@ -338,17 +402,28 @@ echo =====================
 echo Copying FGDs
 echo =====================
 
-mkdir %BUILD_DIR%\base_content\fgd
+mkdir %BUILD_DIR%\mapbase_episodic\fgd
+mkdir %BUILD_DIR%\mapbase_hl2\fgd
+mkdir %BUILD_DIR%\mapbase_hl2mp\fgd
+mkdir %BUILD_DIR%\mapbase_scratch\fgd
 
-copy %SOURCE_FGDS_DIR%\base.fgd %BUILD_DIR%\base_content\fgd
+copy %SOURCE_FGDS_DIR%\base.fgd %BUILD_DIR%\mapbase_episodic\fgd
+copy %SOURCE_FGDS_DIR%\base.fgd %BUILD_DIR%\mapbase_hl2\fgd
+copy %SOURCE_FGDS_DIR%\base.fgd %BUILD_DIR%\mapbase_hl2mp\fgd
+copy %SOURCE_FGDS_DIR%\base.fgd %BUILD_DIR%\mapbase_scratch\fgd
 echo base.fgd copied
-copy %SOURCE_FGDS_DIR%\halflife2.fgd %BUILD_DIR%\base_content\fgd
+copy %SOURCE_FGDS_DIR%\halflife2.fgd %BUILD_DIR%\mapbase_episodic\fgd
+copy %SOURCE_FGDS_DIR%\halflife2.fgd %BUILD_DIR%\mapbase_hl2\fgd
+copy %SOURCE_FGDS_DIR%\halflife2.fgd %BUILD_DIR%\mapbase_hl2mp\fgd
 echo halflife2.fgd copied
-copy %SOURCE_FGDS_DIR%\hl2mp.fgd %BUILD_DIR%\base_content\fgd
+copy %SOURCE_FGDS_DIR%\hl2mp.fgd %BUILD_DIR%\mapbase_hl2mp\fgd
 echo hl2mp.fgd copied
-copy %SOURCE_FGDS_DIR%\sdk.fgd %BUILD_DIR%\base_content\fgd
+copy %SOURCE_FGDS_DIR%\sdk.fgd %BUILD_DIR%\mapbase_scratch\fgd
 echo sdk.fgd copied
-copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\base_content\fgd
+copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\mapbase_hl2\fgd
+copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\mapbase_hl2\fgd
+copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\mapbase_hl2mp\fgd
+copy %SOURCE_FGDS_DIR%\obsolete.fgd %BUILD_DIR%\mapbase_scratch\fgd
 echo obsolete.fgd copied
 
 echo =====================
